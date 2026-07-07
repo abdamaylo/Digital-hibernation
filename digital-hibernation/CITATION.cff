@@ -1,0 +1,21 @@
+
+
+
+```yaml
+cff-version: 1.2.0
+message: "If you use this work, please cite it as follows:"
+title: "Digital Hibernation: A Decision-Theoretic Framework for Asymmetric-Cost Idle-State Selection in Modern Processors"
+authors:
+  - family-names: "Hawas"
+    given-names: "Abdullah"
+date: 2026-07-07
+version: 1.0.0
+doi: 10.5281/zenodo.XXXXXX
+license: GPL-2.0
+repository-code: "https://github.com/your-username/digital-hibernation"
+keywords:
+  - C-States
+  - Power Management
+  - Asymmetric Cost
+  - Reinforcement Learning
+  - Linux Kernel

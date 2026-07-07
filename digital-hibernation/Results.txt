@@ -1,0 +1,43 @@
+
+
+
+| Policy | Energy (J) | Std Dev | 95% CI | Savings vs menu |
+|--------|------------|---------|--------|-----------------|
+| menu | 586.14 | 38.10 | [558.88, 613.39] | — |
+| teo | 539.89 | 5.58 | [535.90, 543.88] | 7.9% |
+| Expected-Cost | 418.67 | 27.21 | [399.21, 438.14] | **28.57%** |
+
+**Statistical significance:**
+- menu vs Expected-Cost: t = 11.31, p < 0.00001
+- menu vs teo: t = 3.80, p = 0.00132
+
+---
+
+### Key Findings
+
+1. Expected-Cost reduces energy by **28.57%** compared to menu on real Intel hardware.
+2. Q-learning agent learns in simulation (192% → 88.9% regret) but **fails to surpass** analytic rule on real hardware.
+3. Periodicity adds no value beyond a small recency window (16–64 idles).
+4. Small windows (8–16) outperform large windows (128–256) in regime-switching workloads.
+
+---
+
+### Requirements
+
+| Component | Version |
+|-----------|---------|
+| Linux Kernel | 5.x / 6.x |
+| CPU | Intel with RAPL support |
+| Python | 3.10+ |
+| NumPy, SciPy, Matplotlib | Latest |
+| trace-cmd, perf, stress-ng | System tools |
+
+---
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/digital-hibernation.git
+cd digital-hibernation
+pip install numpy scipy matplotlib
+sudo apt install trace-cmd linux-tools-common linux-tools-$(uname -r) stress-ng
